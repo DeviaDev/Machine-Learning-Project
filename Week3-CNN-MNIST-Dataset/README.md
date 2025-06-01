@@ -7,11 +7,11 @@
     - Split data jadi train/test
     - Buat DataLoader untuk training & testing
 
-🔹 Adya – CNN Arsitektur
+🔹 Zainab – CNN Arsitektur
     - Bangun model CNN pakai nn.Module
     - Simpan model di file model.py
 
-🔹 Zainab – Training & Evaluation
+🔹 Adya – Training & Evaluation
     - Setup criterion dan optimizer
     - Evaluasi (akurasi, confusion matrix)
     - Simpan model (torch.save)
