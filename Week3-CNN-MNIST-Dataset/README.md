@@ -1,22 +1,41 @@
-# CNN-MNIST-Dataset
+# Tugas Kelompok 3 – CNN pada Dataset MNIST
 
-✍️ Penjelasan Detail Tugas
-🔹 Anest – Preprocessing
-    - Load dataset MNIST 
-    - Transformasi data (misal: normalisasi)
-    - Split data jadi train/test
-    - Buat DataLoader untuk training & testing
+## Deskripsi Proyek
+Proyek ini bertujuan untuk mengimplementasikan model Convolutional Neural Network (CNN) untuk mengklasifikasikan gambar angka tulisan tangan dari dataset MNIST.
 
-🔹 Zainab – CNN Arsitektur
-    - Bangun model CNN pakai nn.Module
-    - Simpan model di file model.py
+## Dataset
+Dataset yang digunakan adalah **MNIST** (Modified National Institute of Standards and Technology), yang berisi 60.000 data latih dan 10.000 data uji berupa gambar grayscale 28x28 piksel dari angka 0 hingga 9.
 
-🔹 Adya – Training & Evaluation
-    - Setup criterion dan optimizer
-    - Evaluasi (akurasi, confusion matrix)
-    - Simpan model (torch.save)
+## Arsitektur Model CNN
+Model CNN yang dibangun memiliki struktur sebagai berikut:
 
-🔹 Pateko – Visualisasi & Laporan
-    - Plot loss dan akurasi vs epoch (pakai matplotlib)
-    - Tampilkan hasil dan penjelasan
-    - Buat file report.md atau Laporan.ipynb untuk dokumentasi
+- **Input Layer**: Menerima gambar 28x28 piksel (grayscale).
+- **Convolutional Layer**: Menggunakan filter untuk mengekstraksi fitur dari gambar.
+- **Activation Function (ReLU)**: Menambahkan non-linearitas ke model.
+- **Pooling Layer (MaxPooling)**: Mengurangi dimensi fitur untuk mengurangi kompleksitas komputasi.
+- **Dropout Layer**: Mencegah overfitting dengan mengabaikan beberapa neuron secara acak selama pelatihan.
+- **Flatten Layer**: Mengubah matriks fitur 2D menjadi vektor 1D.
+- **Fully Connected Layer (Dense)**: Menghubungkan semua neuron untuk klasifikasi akhir.
+- **Output Layer (Softmax)**: Menghasilkan probabilitas untuk setiap kelas digit (0-9).
+
+## Proses Pelatihan
+- **Data Preprocessing**: Normalisasi data agar nilai piksel berada dalam rentang 0 hingga 1.
+- **Loss Function**: Menggunakan categorical cross-entropy.
+- **Optimizer**: Menggunakan Adam optimizer untuk mempercepat konvergensi.
+- **Epochs**: Model dilatih selama beberapa epoch untuk mencapai akurasi optimal.
+- **Batch Size**: Ukuran batch yang digunakan selama pelatihan.
+
+## Hasil dan Evaluasi
+Model CNN berhasil mencapai akurasi tinggi dalam mengenali digit tangan pada dataset MNIST. Evaluasi dilakukan menggunakan data uji untuk memastikan model tidak overfitting.
+
+## Visualisasi
+Visualisasi hasil pelatihan dan evaluasi model, seperti grafik akurasi dan loss, serta contoh prediksi pada data uji, dapat dilihat pada notebook `CNN_MNIST.ipynb`.
+
+## Anggota Kelompok
+- Devianest Narendra
+- Zainab Ahmad
+- Adya Rusmalillah
+- Naila Fatikhah
+
+## Catatan
+Untuk detail implementasi dan hasil lebih lanjut, silakan lihat notebook `CNN_MNIST.ipynb` dalam folder `Week3-CNN-MNIST-Dataset`.
