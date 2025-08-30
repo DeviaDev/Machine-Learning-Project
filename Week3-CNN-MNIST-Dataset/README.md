@@ -36,6 +36,7 @@ Visualisasi hasil pelatihan dan evaluasi model, seperti grafik akurasi dan loss,
 - Zainab Ahmad
 - Adya Rusmalillah
 - Naila Fatikhah
+- Nurul Khoiriyah
 
 ## Catatan
 Untuk detail implementasi dan hasil lebih lanjut, silakan lihat notebook `CNN_MNIST.ipynb` dalam folder `Week3-CNN-MNIST-Dataset`.
